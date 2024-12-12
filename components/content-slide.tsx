@@ -9,7 +9,7 @@ const contentData = {
     et l'engagement envers l'innovation durable. Notre laboratoire se concentre sur trois domaines principaux :
     l'Intelligence Artificielle, l'Interface Homme-Machine, et l'ICT4Dev (Technologies de l'Information et 
     de la Communication pour le Développement).`,
-    author: "M. Aboul Hassane CISSE",
+    author: "Dr. Aboul Hassane CISSE",
     role: "Directeur de BambooLab"
   },
   "À Propos": {
