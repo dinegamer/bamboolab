@@ -1,5 +1,16 @@
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
+
+// Define animation variants
+const titleVariants: Variants = {
+  initial: { y: 0, scale: 1.5, opacity: 0 },
+  animate: {
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 1, times: [0, 0.5, 1] }
+  }
+}
 
 const contentData = {
   "Accueil": {
@@ -71,8 +82,8 @@ const contentData = {
   }
 }
 
-export function ContentSlide({ title, onClose }) {
-  const data = contentData[title] || {
+export function ContentSlide({ title, onClose }: { title: string; onClose: () => void }) {
+  const data = contentData[title as keyof typeof contentData] || {
     title: title,
     content: "Contenu en cours de développement",
     author: "BambooLab",
@@ -94,11 +105,9 @@ export function ContentSlide({ title, onClose }) {
       >
         <motion.h2
           className="mb-4 text-4xl sm:text-5xl md:text-6xl font-bold text-white"
-          initial={{ y: 0, scale: 1.5, opacity: 0 }}
-          animate={[
-            { y: 0, scale: 1.5, opacity: 1, transition: { duration: 0.5 } },
-            { y: 0, scale: 1, transition: { delay: 0.5, duration: 0.5 } }
-          ]}
+          variants={titleVariants}
+          initial="initial"
+          animate="animate"
         >
           {data.title}
         </motion.h2>
