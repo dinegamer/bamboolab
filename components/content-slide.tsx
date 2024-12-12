@@ -1,7 +1,6 @@
-import { motion, Variants } from 'framer-motion'
+import { motion, Variants, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 
-// Define animation variants
 const titleVariants: Variants = {
   initial: { y: 0, scale: 1.5, opacity: 0 },
   animate: {
