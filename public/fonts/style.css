@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Darker Grotesque';
+    src: local('Darker Grotesque SemiBold'), local('Darker-Grotesque-SemiBold'),
+        url('DarkerGrotesque-SemiBold.woff2') format('woff2'),
+        url('DarkerGrotesque-SemiBold.woff') format('woff'),
+        url('DarkerGrotesque-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
